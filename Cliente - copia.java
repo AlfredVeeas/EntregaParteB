@@ -10,28 +10,12 @@ import java.util.Scanner;
  *
  * @author evert
  */
-public class Repartidor extends Persona{
-    private String MatriculaVehiculo;
+public class Cliente extends Persona {
     private int dinero;
-    
     private Vendedor vendedor;
-    
-    public Repartidor(String MatriculaVehiculo, String Nombre, String Rut, String Direccion) {
+
+    public Cliente(int dinero, String Nombre, String Rut, String Direccion) {
         super(Nombre, Rut, Direccion);
-        this.MatriculaVehiculo = MatriculaVehiculo;
-    }
-
-    public String getMatriculaVehiculo() {
-        return MatriculaVehiculo;
-    }
-
-    public void setMatriculaVehiculo(String MatriculaVehiculo) {
-        this.MatriculaVehiculo = MatriculaVehiculo;
-    }
-
-    public Repartidor(String MatriculaVehiculo, int dinero, String Nombre, String Rut, String Direccion) {
-        super(Nombre, Rut, Direccion);
-        this.MatriculaVehiculo = MatriculaVehiculo;
         this.dinero = dinero;
     }
 
@@ -42,34 +26,14 @@ public class Repartidor extends Persona{
     public void setDinero(int dinero) {
         this.dinero = dinero;
     }
-
-    
-    
     
     @Override
-    public String identificarse() {
-        return getNombre() + getDireccion() + getMatriculaVehiculo();
+    public String identificarse(){
+        return getNombre() + getRut();
     }
     
-    public void Repartir(String Direccion){
-        System.out.println("Repartiendo a :"+Direccion);
-    }
-
     @Override
-    public void ComprarProducto() {
-        super.ComprarProducto(); 
-    }
-
-    @Override
-    public void AgregarFondos() {
-        super.AgregarFondos(); 
-    }
-    
-    
-    
-    /*
-    @Override
-    public void ComprarProducto() {
+    public void ComprarProducto(){
         String ProductoComprar="";
         Scanner Entrada = new Scanner(System.in);
         
@@ -81,15 +45,14 @@ public class Repartidor extends Persona{
             }
         }
     }
-
-    @Override
-    public void AgregarFondos() {
+    @Override 
+    public void AgregarFondos(){
         int nuevosFondos;
         Scanner Entrada = new Scanner(System.in);
         System.out.println("¿Cuanto dinero quieres agregar? "+getNombre());
         nuevosFondos = Entrada.nextInt();
         
         setDinero(dinero+nuevosFondos);
+        
     }
-    */
 }

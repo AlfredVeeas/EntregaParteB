@@ -265,11 +265,8 @@ public class InterfaceVendedor extends Frame implements WindowListener, ActionLi
             
          if(obj==btnLimpiar){
              System.out.println("limpiar");
-         }
-        
+         }     
          
-         //Cliente cliente=new Cliente(txtNombre.getText().toString(),txtNombre.getText().toString());
-         //cliente.InsertarDatos();
     }
     
     
@@ -296,10 +293,7 @@ public class InterfaceVendedor extends Frame implements WindowListener, ActionLi
                 dispose();
                 
      }
-     
-    
-
-   
+      
       
       public void windowOpened(WindowEvent e) {}
       public void windowActivated(WindowEvent e) {}
@@ -310,9 +304,7 @@ public class InterfaceVendedor extends Frame implements WindowListener, ActionLi
 
    //eventos teclado
     public void keyTyped(KeyEvent e) {}
-    public void keyPressed(KeyEvent e){
-          
-    }
+    public void keyPressed(KeyEvent e){}       
     public void keyReleased(KeyEvent e){}
     
 }

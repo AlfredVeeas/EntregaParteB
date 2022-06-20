@@ -4,6 +4,8 @@
  */
 package app;
 
+import java.util.Scanner;
+
 /**
  *
  * @author evert

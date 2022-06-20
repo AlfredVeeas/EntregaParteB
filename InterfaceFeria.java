@@ -226,9 +226,7 @@ public class InterfaceFeria extends Frame implements WindowListener, ActionListe
              System.out.println("limpiar");
          }
         
-         
-         //Cliente cliente=new Cliente(txtNombre.getText().toString(),txtNombre.getText().toString());
-         //cliente.InsertarDatos();
+                
     }
     
     
@@ -269,10 +267,7 @@ public class InterfaceFeria extends Frame implements WindowListener, ActionListe
 
    //eventos teclado
     public void keyTyped(KeyEvent e) {}
-    public void keyPressed(KeyEvent e){
-                       
-          
-    }
+    public void keyPressed(KeyEvent e){}                     
     public void keyReleased(KeyEvent e){}
     
 }

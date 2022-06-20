@@ -31,28 +31,16 @@ public class Cliente extends Persona {
     public String identificarse(){
         return getNombre() + getRut();
     }
-    
+
     @Override
-    public void ComprarProducto(){
-        String ProductoComprar="";
-        Scanner Entrada = new Scanner(System.in);
-        
-        if(dinero > 0){
-            System.out.println("¿Que producto desea comprar? "+getNombre());
-            ProductoComprar=Entrada.nextLine();
-            if(vendedor.ValidarProducto(ProductoComprar)){
-                setDinero(dinero-100);
-            }
-        }
+    public void ComprarProducto() {
+        super.ComprarProducto(); 
     }
-    @Override 
-    public void AgregarFondos(){
-        int nuevosFondos;
-        Scanner Entrada = new Scanner(System.in);
-        System.out.println("¿Cuanto dinero quieres agregar? "+getNombre());
-        nuevosFondos = Entrada.nextInt();
-        
-        setDinero(dinero+nuevosFondos);
-        
+
+    @Override
+    public void AgregarFondos() {
+        super.AgregarFondos(); 
     }
+    
+    
 }
